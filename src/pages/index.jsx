@@ -4,7 +4,7 @@ import styles from "src/styles/Home.module.css"
 import { Header } from "src/components/Header"
 import { Main } from "src/components/Main"
 import { Footer } from "src/components/Footer"
-import { useCallback } from "react"
+import { useCallback, useEffect } from "react"
 
 export default function Home() {
   const foo = 1
@@ -14,6 +14,15 @@ export default function Home() {
     e.preventDefault()
     alert(foo)
   }, [])
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightblue"
+    return () => {
+      document.body.style.backgroundColor = ""
+    }
+  }, [])
+
+  useEffect
 
   return (
     <div className={styles.container}>
