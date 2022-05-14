@@ -4,7 +4,7 @@ import styles from "src/styles/Home.module.css"
 import { Header } from "src/components/Header"
 import { Main } from "src/components/Main"
 import { Footer } from "src/components/Footer"
-import { useCallback } from "react/cjs/react.production.min"
+import { useCallback } from "react"
 
 export default function Home() {
   const foo = 1
