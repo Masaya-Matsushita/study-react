@@ -35,8 +35,7 @@ export default function Home() {
         alert("同じ要素が既に存在します。")
         return prevArray
       }
-      const newArray = [...prevArray, text]
-      return newArray
+      return [...prevArray, text]
     })
   }, [text])
 
