@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Link from "next/link"
-import { useUsers } from "src/hooks/useUsers"
+import { useUsers } from "src/hooks/useFetchArray"
 
 export const Users = () => {
   const { data, error, isLoading, isEmpty } = useUsers()
