@@ -3,7 +3,7 @@ import classes from "src/styles/Home.module.css"
 import { Header } from "src/components/Header"
 import { Posts } from "src/components/Posts"
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div className={classes.container}>
       <Head>
