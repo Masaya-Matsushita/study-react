@@ -1,5 +1,6 @@
 {
   // import文を自動生成したときに、相対パスでなく絶対パス指定で生成される
   // jsconfig.jsonが必要
-  "javascript.preferences.importModuleSpecifier": "non-relative"
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "editor.quickSuggestions": { "strings": true }
 }

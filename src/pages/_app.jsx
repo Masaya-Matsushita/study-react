@@ -1,4 +1,5 @@
-import "src/styles/globals.css"
+import "tailwindcss/tailwind.css"
+// import "src/styles/globals.css"
 import Head from "next/head"
 import { Layout } from "src/components/Layout"
 import { Header } from "src/components/Header"
@@ -12,6 +13,7 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <Header />
       <Layout>
+        <div className="text-red-500">test</div>
         <Component {...pageProps} />
       </Layout>
     </>
