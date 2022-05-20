@@ -2,26 +2,26 @@ import Head from "next/head"
 import { useComment } from "src/hooks/useComment"
 
 export const Comment = () => {
-  const { comment, commentError, isLoading } = useComment()
+  const { data, error, isLoading } = useComment()
 
   if (isLoading) {
     return <div>ローディング中</div>
   }
 
-  if (commentError) {
-    return <div>{commentError.message}</div>
+  if (error) {
+    return <div>{error.message}</div>
   }
 
   return (
     <div>
       <Head>
-        <title>{comment?.name}</title>
+        <title>{data?.name}</title>
       </Head>
-      {comment?.body ? (
+      {data?.body ? (
         <div>
-          <h1>{comment.body}</h1>
-          <div>{comment.name}</div>
-          <div>{comment.email}</div>
+          <h1>{data.body}</h1>
+          <div>{data.name}</div>
+          <div>{data.email}</div>
         </div>
       ) : null}
     </div>
