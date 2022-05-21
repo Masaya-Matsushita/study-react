@@ -1,4 +1,3 @@
-import { data } from "autoprefixer"
 import Head from "next/head"
 import { PostsByUserId } from "src/components/Posts/PostsByUserId"
 import { useUser } from "src/hooks/useUser"
