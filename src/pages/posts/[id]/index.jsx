@@ -1,9 +1,9 @@
-import { Post } from "src/components/Post"
+import { PostDetail } from "src/components/Post/PostDetail"
 
 const PostsId = () => {
   return (
     <div>
-      <Post />
+      <PostDetail />
     </div>
   )
 }
