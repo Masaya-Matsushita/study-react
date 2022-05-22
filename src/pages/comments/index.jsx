@@ -1,8 +1,9 @@
 import { Comments as CommentsComponent } from "src/components/Comments"
+import { API_URL } from "src/utils/const"
 import { SWRConfig } from "swr"
 
 export const getStaticProps = async () => {
-  const COMMENTS_API_URL = `https://jsonplaceholder.typicode.com/comments`
+  const COMMENTS_API_URL = `${API_URL}/comments`
   const comments = await fetch(COMMENTS_API_URL)
   const commentsData = await comments.json()
 
