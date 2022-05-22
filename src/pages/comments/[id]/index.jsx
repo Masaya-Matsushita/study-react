@@ -22,6 +22,7 @@ export const getStaticProps = async (ctx) => {
   if (!comment.ok) {
     return {
       notFound: true,
+      revalidate: 10,
     }
   }
 
@@ -31,6 +32,7 @@ export const getStaticProps = async (ctx) => {
     props: {
       fallback: {
         [COMMENT_API_URL]: commentData,
+        revalidate: 10,
       },
     },
   }
