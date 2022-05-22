@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
-import { CommentsByPostId } from "src/components/Comments/CommentsByPostId"
+import { CommentListByPostId } from "src/components/Comment/CommentListByPostId"
 import { UserNameByUserId } from "src/components/User/UserNameByUserId"
 import { useFetch } from "src/hooks/useFetch"
 import { API_URL } from "src/utils/const"
@@ -29,7 +29,7 @@ export const PostDetail = () => {
       <p className=" text-xl text-gray-900 mt-2">{data?.body}</p>
       <h2 className="text-xl font-bold mt-10">コメント一覧</h2>
       <div className="mt-2">
-        <CommentsByPostId id={data.id} />
+        <CommentListByPostId id={data.id} />
       </div>
     </div>
   )

@@ -1,9 +1,14 @@
 import Head from "next/head"
+import { useRouter } from "next/router"
 import { PostTitleByCommentId } from "src/components/Post/PostTitleByCommentId"
-import { useComment } from "src/hooks/useComment"
+import { useFetch } from "src/hooks/useFetch"
+import { API_URL } from "src/utils/const"
 
-export const Comment = () => {
-  const { data, error, isLoading } = useComment()
+export const CommentDetail = () => {
+  const router = useRouter()
+  const { data, error, isLoading } = useFetch(
+    router.query.id ? `${API_URL}/comments/${router.query.id}` : null
+  )
 
   if (isLoading) {
     return <div>ローディング中</div>
