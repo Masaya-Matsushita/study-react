@@ -1,4 +1,4 @@
-import { Users as UsersComponent } from "src/components/Users"
+import { UserList } from "src/components/User/UserList"
 import { API_URL } from "src/utils/const"
 import { SWRConfig } from "swr"
 
@@ -22,7 +22,7 @@ const Users = (props) => {
   return (
     <div>
       <SWRConfig value={{ fallback }}>
-        <UsersComponent />
+        <UserList />
       </SWRConfig>
     </div>
   )

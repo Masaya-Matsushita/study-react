@@ -21,9 +21,9 @@ export const useFetchArray = (url) => {
 // }
 
 //users
-export const useUsers = () => {
-  return useFetchArray(`${API_URL}/users`)
-}
+// export const useUsers = () => {
+//   return useFetchArray(`${API_URL}/users`)
+// }
 
 //comments
 export const useComments = () => {

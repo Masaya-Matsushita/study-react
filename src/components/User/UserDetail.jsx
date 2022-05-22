@@ -1,9 +1,14 @@
 import Head from "next/head"
+import { useRouter } from "next/router"
 import { PostListByUserId } from "src/components/Post/PostListByUserId"
-import { useUser } from "src/hooks/useUser"
+import { useFetch } from "src/hooks/useFetch"
+import { API_URL } from "src/utils/const"
 
-export const User = () => {
-  const { data, error, isLoading } = useUser()
+export const UserDetail = () => {
+  const router = useRouter()
+  const { data, error, isLoading } = useFetch(
+    router.query.id ? `${API_URL}/users/${router.query.id}` : null
+  )
 
   if (isLoading) {
     return <div>ローディング中</div>
